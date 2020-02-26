@@ -1,0 +1,32 @@
+<!-- Página que compartilha código em comum com about.html e portfolio.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    {% block head %} 
+        <title>Thiago Lanza</title>
+    {%endblock%}
+
+    
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="links">
+            <a href="/">Sobre</a>
+            <a href="/portfolio">Aulas</a>
+        </div>
+    </header>
+
+    <!-- inserção de código de maneira dinâmica com template engine (nunjucks) -->
+    {% block content %}{% endblock %} 
+    <!--content é o nome dado a este bloco-->
+
+</body>
+
+</html>
